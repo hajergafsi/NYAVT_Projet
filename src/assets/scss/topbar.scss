@@ -1,0 +1,44 @@
+.top-nav-bar {
+    /*position: sticky;
+    position: -webkit-sticky;
+    top: 2em;*/
+    height: 60px;
+    /*z-index: 999;*/
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+        top: 2em;
+    }
+}
+
+.nav-bar-search {
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.user-dropdown-info {
+    margin-right: 0.8em;
+
+    * {
+        line-height: 1em;
+    }
+}
+
+.country-flag.selected {
+    margin-right: 5px;
+}
+
+.topnavbar_dropdown {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .topnavbar_dropdown {
+        display: initial;
+    }
+
+    .dropdown-language.desktop {
+        display: none;
+    }
+}

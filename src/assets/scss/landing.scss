@@ -1,0 +1,210 @@
+.landing {
+  overflow-x: hidden;
+  background: rgb(184,217,224);
+background: linear-gradient(270deg, rgba(184,217,224,0.9023984593837535) 0%, rgba(249,230,220,0.773546918767507) 66%);
+  padding-left: 9%;
+  padding-right: 5%;
+  padding-top: 3%;
+  h1,
+  h2 {
+    font-weight: 700;
+  }
+
+  * {
+    line-height: 1.5;
+  }
+
+  .wave {
+    &.wave-reverse {
+      transform: rotateX(180deg) rotateY(180deg);
+    }
+
+    @media screen and (min-width: 968px) {
+      display: none;
+    }
+  }
+
+  .navbar {
+    width: 100%;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 5px 5px rgba(170, 170, 170, 0.4);
+
+    @media screen and (min-width: 968px) {
+      padding: 1.5em 4em;
+    }
+  }
+  .hero-section {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 40vh;
+    height: 100%;
+    .landing-form-background{
+      width: 100%;
+      padding-top: 4%;
+      padding-bottom: 4%;
+      display: flex;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background: url('../images/back.png');
+      .landing-form{
+          display: flex;
+          width: 80%;
+          background-color: rgba(255, 255, 255, 0.781);
+          backdrop-filter: blur(10px);
+          justify-items: center;
+          border-radius: 25px;
+          padding: 10% 8% ;
+          text-align: center;
+          .title{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 15px;
+            font-size: 2.5em;
+            color: rgba(38, 138, 253, 0.945);
+          }
+          .description{
+            font-size: small;
+            margin-bottom: 25px;
+          }
+          .input{
+            margin-top: 10px;
+          }
+          .btn-landing-form{
+            width: 220px;
+            margin-top: 50px;
+            height: 40px;
+          }
+      }
+    }
+    img {
+      width: fit-content;
+      height: fit-content;
+    }
+    
+    .content {
+      margin: 0;
+    }
+
+    .blob1 {
+      position: absolute;
+      z-index: -1;
+      opacity: 0.1;
+      top: 0;
+      right: 0;
+      transform: translate(20%);
+      width: 40%;
+
+      @media screen and (min-width: 968px) {
+        transform: translate(30%, -30%);
+        width: 60%;
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    @media screen and (min-width: 1180px) {
+      gap: 5em;
+      flex-direction: row;
+
+      .content {
+        margin: 5em;
+        width: 60%;
+      }
+    }
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em 0;
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+      margin-bottom: 1em;
+      color: black;
+    }
+
+    .blob2 {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      filter: invert(0.1);
+      width: 30%;
+
+      @media screen and (min-width: 968px) {
+        transform: translate(-100%, 25%);
+      }
+    }
+
+    &:nth-of-type(2n) {
+      flex-direction: column-reverse;
+    }
+
+    .img-fluid {
+      margin-top: 15px;
+      filter: drop-shadow(0 0 5px rgb(170, 170, 170));
+    }
+
+    @media screen and (min-width: 968px) {
+      padding: 3em auto;
+      flex-direction: row;
+      justify-content: center;
+      gap: 6em;
+
+      div {
+        width: 40%;
+      }
+
+      &:nth-of-type(2n) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  footer {
+    padding: 2em;
+
+    .footer-wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 2em;
+      min-width: 70%;
+
+      .f-left,
+      .f-right {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        .social {
+          display: flex;
+          gap: 1em;
+        }
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 968px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .footer-wrapper {
+        width: 50%;
+      }
+    }
+  }
+}
